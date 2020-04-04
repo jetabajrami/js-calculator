@@ -14,11 +14,11 @@ const calculator = function(input){
     return input.num1 - input.num2;
   }else if (input.operation === "Multiply" || input.operation === "*"){
     return input.num1 * input.num2;
-  }else if (input.operation === "Divide" || input.operation === "/"){
+  }else if (input.operation === "Divide" || input.operation === "/" && input.num){
     let result = input.num1 / input.num2;
   }
 }
-
+ 
 // If the input is valid or not.
 const inputValidation = function(input){
 
@@ -35,6 +35,15 @@ const inputValidation = function(input){
   }
 }
 
+const valibeDivide = function(input){
+  if (input.num2 === 0){
+    console.log("Number can not be devide with zero");
+  } else{
+    return inputValidation(input);
+  }
+}
+
+
 //Calling function.
-console.log(`Total is:  ${inputValidation(exampleAdditionInput)}`);
+console.log(valibeDivide(exampleAdditionInput))
  
