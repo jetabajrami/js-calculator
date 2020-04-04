@@ -16,8 +16,8 @@ const calculator = function(input){
     return input.num1 * input.num2;
   }else if (input.operation === "Divide" || input.operation === "/"){
     let result = input.num1 / input.num2;
-  }
-}
+  };
+};
 
 // If the input is valid or not.
 const inputValidation = function(input){
@@ -32,8 +32,17 @@ const inputValidation = function(input){
     console.log('This is not a valid operator');
   } else if (allOperator.includes(input.operation)){
     return calculator(input);
-  }
-}
+  };
+};
+
+//
+const valibeDivide = function(input){
+  if (input.num2 === 0){
+    console.log("Number can not be devide with zero");
+  } else{
+    return inputValidation(input);
+  };
+};
 
 //Calling function.
 console.log(`Total is:  ${inputValidation(exampleAdditionInput)}`);
