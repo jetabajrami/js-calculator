@@ -32,8 +32,17 @@ const inputValidation = function(input){
     console.log('This is not a valid operator');
   } else if (allOperator.includes(input.operation)){
     return calculator(input);
-  }
-}
+  };
+};
+
+//
+const valibeDivide = function(input){
+  if (input.num2 === 0){
+    console.log("Number can not be devide with zero");
+  } else{
+    return inputValidation(input);
+  };
+};
 
 const valibeDivide = function(input){
   if (input.num2 === 0){
