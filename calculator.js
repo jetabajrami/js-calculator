@@ -1,8 +1,8 @@
 //Object
 const exampleAdditionInput = {
   num1: 4,
-  num2: 4,
-  operation: 'Add',
+  num2: 2,
+  operation: 'Divide',
 }
 
 // Calculator.
@@ -16,6 +16,7 @@ const calculator = function(input){
     return input.num1 * input.num2;
   }else if (input.operation === "Divide" || input.operation === "/" && input.num){
     let result = input.num1 / input.num2;
+    return result
   };
 };
  
